@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="head">
+    <div class="logo">
+        <a href="index.html">CreditBank</a>
+    </div>
+    <div class="additional-text">
+        <a href="#About">About Us</a>
+        <button class="reg">Register</button>
+    </div>
+</header>
+<main>
+    <section class="sec1">
+        <div class="main">
+            <div class="main-text">
+                <p id="mText">In this website you can see the correct exchange rate and exchange them</p>
+                <p id="sText">We are helping people lose their money </p>
+            </div>
+            <div class="image">
+                <img src="./components/169-1695980_stacks-of-money-transparent-wallpaper-stacks-of-money-transparent-background-removebg-preview.png" alt="money">
+            </div>
+        </div>
+        <button class="course">
+            <a href="#exchange">See the course</a>
+        </button>
+    </section>
+    <section id="exchange">
+        <div class="text">
+            <b>Get current exchange currency now!</b>
+            <p>And we promise, you won't be disappointed!</p>
+        </div>
+        <div class="img2">
+            <img src="components/stonks">
+        </div>
+        <div class="currency">
+            <label for="curr">Choose your currency to watch</label>
+            <select name="sel" id="curr">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+            <button class="course2">Check</button>
+            <p class="money">The price of <span class="selected-currency"></span> is <b class="price"></b></p>
+        </div>
+    </section>
+    <footer>
+        <div id = "About">
+            <p>This website is developed by Oleg Poloviy</p>
+           <a href="https://github.com/OlegPoloviy" target="_blank">
+               <img src="./components/github-2749268-2284658.webp" alt="cat">
+           </a>
+        </div>
+    </footer>
+</main>
+<script src="./script.js"></script>
+<script src="./registration.js"></script>
+</body>
+</html>

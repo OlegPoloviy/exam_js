@@ -1,0 +1,213 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #001b66;
+}
+
+.head {
+    width: 100%;
+    height: 20vh;
+    display : flex;
+    position: relative;
+    align-items: center;
+}
+
+.logo{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #D7DEF8;
+}
+
+.logo a:hover{
+    text-decoration: underline;
+}
+
+.additional-text {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    color: #D7DEF8;
+}
+
+.additional-text a{
+    margin-right: 80px;
+    text-decoration: none;
+    color: #D7DEF8;
+}
+
+.additional-text a:hover{
+    text-decoration: underline;
+}
+
+.reg {
+    background-color: #001b66;
+    color: #D7DEF8;
+    border: white solid 1px;
+    border-radius: 3px;
+    width: 20%;
+    font-size: 20px;
+}
+
+.sec1 {
+    height: 80vh;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    width: 50%;
+    position: relative;
+    top: 80px;
+    left: 50px;
+}
+
+#mText{
+    color: #D7DEF8;
+    font-size: 49px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#sText {
+    color: #D7DEF8;
+    font-size: 25px;
+}
+
+.image {
+    width: 30%;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+.course {
+    position: relative;
+    top: 70px;
+    left: 235px;
+    background-color: white;
+    color: #3666EA;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    border-radius:10px;
+}
+
+.course a {
+    text-decoration: none;
+}
+
+.course:active{
+    opacity: 0.2;
+}
+
+/*exchange page*/
+#exchange {
+    position: relative;
+    height: 80vh;
+    top: 80px;
+    background-color: white;
+}
+
+#exchange b{
+    font-size: 49px;
+    color : #7283C2
+}
+
+#exchange p{
+    font-size: 20px;
+    color : #868687
+}
+
+.text{
+    position: absolute;
+    top: 200px;
+    left : 60px;
+}
+
+.img2 {
+    position: absolute;
+    left: 1200px;
+    top: 100px;
+}
+
+.currency {
+    position: absolute;
+    top: 350px;
+    left: 60px;
+}
+
+.currency label {
+    font-size: 20px;
+    color : #868687;
+    margin-right: 30px;
+}
+
+#curr{
+    width: 70px;
+    height: 25px;
+    color: #001b66;
+    border-radius: 10%;
+    background-color: white;
+}
+
+.course2{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: white;
+    color: #3666EA;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    border-radius:10px
+}
+
+.course2:active{
+    opacity: 0.2;
+}
+
+.money{
+    position: absolute;
+    top: 100px;
+}
+
+.price {
+    font-size: 12px;
+}
+
+/*footer*/
+footer{
+    background-color: #001b66;
+    height: 10vh;
+    position: relative;
+}
+
+#About{
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color : white;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    left: 600px;
+}
+
+#About img{
+    width: 70px;
+}
