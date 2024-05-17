@@ -11,6 +11,7 @@ currencyButton.onclick = () => {
         money.innerText = 'You need to be logged in!';
         money.style.color = 'red';
         money.style.marginTop = '40px';
+        console.error('you need to be logged in')
     } else if (loggedIn === true) {
         let selectedCurrency = currency.value;
         priceText.textContent = `${selectedCurrency} in UAH`;
