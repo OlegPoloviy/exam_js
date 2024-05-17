@@ -211,3 +211,8 @@ footer{
 #About img{
     width: 70px;
 }
+
+/*registration*/
+#register{
+    position: fixed;
+}
