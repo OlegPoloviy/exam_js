@@ -24,10 +24,6 @@ class User{
 
 let users = []
 
-function getUsers (){
-    let registered = JSON.parse(localStorage.getItem('users'))
-    return registered
-}
 function saveUsers(users) {
     localStorage.setItem('users',JSON.stringify(users))
 }
@@ -49,10 +45,69 @@ register.onclick = function ($event){
         err.innerHTML = "Passwords don't match!"
         err.style.color = "red"
         return
+    }else if(name === "" || pass === "" || repass === ""){
+        let err = document.querySelector("label[for='repass']")
+        err.innerHTML = "There should not be empty fields "
+        err.style.color = "red"
+        return
     }
 
     users.push(newUser)
     saveUsers(users)
     alert('User registered!')
+    form.style.visibility = 'hidden'
+
+}
+
+//logging in
+let loginBtn = document.getElementsByClassName('login')[0]
+let loginForm = document.getElementById('login')
+
+function validateLogin(){
+    let existing = JSON.parse(localStorage.getItem('users')) || [];
+    let keys = existing.map(user => Object.values(user));
+    return keys;
+}
+
+
+loginBtn.onclick = () => {
+    loginForm.style.visibility = "visible"
+}
+
+let loginClose = document.getElementById('closeBtn')
+
+loginClose.onclick = ($event) => {
+    $event.preventDefault()
+    loginForm.style.visibility = "hidden"
+}
+
+let login = document.getElementById('loginBtn')
+
+login.onclick = ($event) =>{
+    $event.preventDefault()
+    const loginName = document.forms.login.loginName.value
+    const loginPass = document.forms.login.logPass.value
+
+    if(loginName === "" || loginPass === ""){
+        let err = document.querySelector("label[for = 'loginName']")
+        err.innerHTML = "The username or password is empty!"
+        err.style.color = 'red'
+    }
+
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    let user = users.find(user => user.username === loginName && user.password === loginPass);
+
+    if (user) {
+        loggedIn = true;
+        alert('Login successful!');
+        loginForm.style.visibility = 'hidden';
+    } else {
+        let err = document.querySelector("label[for='logPass']");
+        err.innerHTML = "Invalid username or password!";
+        err.style.color = "red";
+    }
+
+    loginBtn.innerHTML = `Logged in as ${user.username}`
 }
 
